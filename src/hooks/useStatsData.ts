@@ -16,17 +16,13 @@ export function useStatsData() {
         // 1. Get stats
         const statsRes = await axios.get(
           "/api/external-api/insidex/coins/0x2::sui::SUI/market-data",
-          {
-            headers: {
-              "x-api-key": "insidex_api.hGhJarqGjnUDkw36WUXETXyR",
-            },
-          }
+          {},
         );
         setSuistats(statsRes.data);
 
         // 2. Get gist doc
         const gistRes = await axios.get(
-          "https://gist.githubusercontent.com/Nnadivictory25/459afe34d2d6356af3e4d68a8c671820/raw/docs.md"
+          "https://gist.githubusercontent.com/Nnadivictory25/459afe34d2d6356af3e4d68a8c671820/raw/docs.md",
         );
 
         const doc = gistRes.data as string;

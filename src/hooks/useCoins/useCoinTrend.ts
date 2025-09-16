@@ -164,9 +164,7 @@ export const useCoinTrend = (options?: {
         const response = await fetch(
           "/api/external-api/insidex/coins/trending",
           {
-            headers: {
-              "x-api-key": import.meta.env.VITE_COIN_API_KEY || "",
-            },
+            headers: {},
           },
         );
 
@@ -191,7 +189,6 @@ export const useCoinTrend = (options?: {
       setLoading(false);
     }
   };
-
 
   const refetch = () => {
     // Clear cache and refetch
