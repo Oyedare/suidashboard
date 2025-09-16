@@ -18,7 +18,7 @@ export function usePoolsData() {
 
     axios
       .get(
-        "/api/external-api/insidex/pools/top-liquidity?limit=10&platforms=cetus%2Cturbos",
+        ".netlify/functions/bluefin/external-api/insidex/pools/top-liquidity?limit=10&platforms=cetus%2Cturbos",
         {},
       )
       .then((res) => setSuidata(res.data))
@@ -27,7 +27,7 @@ export function usePoolsData() {
 
     axios
       .get(
-        "/api/external-api/insidex/coins/0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL/pools",
+        ".netlify/functions/bluefin/external-api/insidex/coins/0x356a26eb9e012a68958082340d4c4116e7f55615cf27affcff209cf0ae544f59::wal::WAL/pools",
         {},
       )
       .then((res) => setWaldata(res.data))

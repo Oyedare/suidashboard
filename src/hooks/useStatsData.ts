@@ -15,7 +15,7 @@ export function useStatsData() {
 
         // 1. Get stats
         const statsRes = await axios.get(
-          "/api/external-api/insidex/coins/0x2::sui::SUI/market-data",
+          ".netlify/functions/bluefin/external-api/insidex/coins/0x2::sui::SUI/market-data",
           {},
         );
         setSuistats(statsRes.data);

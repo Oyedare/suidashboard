@@ -162,7 +162,7 @@ export const useCoinTrend = (options?: {
       // Try to fetch from API, fallback to mock data if it fails
       try {
         const response = await fetch(
-          "/api/external-api/insidex/coins/trending",
+          ".netlify/functions/bluefin/external-api/insidex/coins/trending",
           {
             headers: {},
           },
